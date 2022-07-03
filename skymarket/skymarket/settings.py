@@ -106,17 +106,17 @@ SPECTACULAR_SETTINGS = {  # описание документации
     'DESCRIPTION': "Django project for ad site.",
     'VERSION': "1.0.0",
 }
-# TODO здесь мы настраиваем Djoser
+
 DJOSER = {
     'SERIALIZERS': {
         'user_create': 'users.serializers.UserRegistrationSerializer',
-        # 'current_user': 'users.serializers.CurrentUserSerializer',
+        'current_user': 'users.serializers.CurrentUserSerializer',
     },
     'LOGIN_FIELD': 'email',
     'PASSWORD_RESET_CONFIRM_URL': 'reset/password/reset/confirm/{uid}/{token}',
     'EMAIL': {
         'password_reset': 'users.email.PasswordResetEmail',
-    }
+    },
 }
 
 AUTH_USER_MODEL = 'users.User'
@@ -197,3 +197,4 @@ EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = os.environ.get("EMAIL_PORT")
+DEFAULT_FROM_EMAIL = "SkyMarket Team <noreply@example.com>"

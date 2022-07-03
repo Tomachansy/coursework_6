@@ -13,4 +13,4 @@ class UserRegistrationSerializer(BaseUserRegistrationSerializer):
 class CurrentUserSerializer(serializers.ModelSerializer):
     class Meta(BaseUserRegistrationSerializer.Meta):
         model = User
-        fields = ["first_name", "last_name", "phone", "image"]
+        fields = ["id", "first_name", "last_name", "phone", "image"]
