@@ -10,7 +10,7 @@ class Ad(models.Model):
     price = models.PositiveIntegerField(
         verbose_name="Цена товара", help_text="Введите цену товара."
     )
-    description = models.CharField(
+    description = models.TextField(
         max_length=1000, null=True, blank=True,
         verbose_name="Описание товара", help_text="Введите описание товара."
     )
@@ -37,7 +37,7 @@ class Ad(models.Model):
 
 
 class Comment(models.Model):
-    text = models.CharField(
+    text = models.TextField(
         max_length=1000,
         verbose_name="Комментарий", help_text="Введите комментарий."
     )
